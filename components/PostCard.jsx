@@ -13,7 +13,7 @@ function PostCard({ post }) {
       </div>
       <div className="lg:px20 px-8">
         <h1 className="mt-5 mb-8 cursor-pointer text-center text-3xl font-semibold transition duration-150 hover:text-pink-600  ">
-          <Link href={`/post/${post.slug}`}>{post.title}</Link>
+          <Link href={`/posts/${post.slug}`}>{post.title}</Link>
         </h1>
         <div className="mb-8 block w-full items-center text-center lg:flex ">
           <div className="mb-4 mr-8 flex w-full items-center lg:mb-0 lg:w-auto">
@@ -33,7 +33,7 @@ function PostCard({ post }) {
             </div>
           </div>
         </div>
-        <p className=" mb-8   text-lg font-normal text-gray-700 md:px-6">
+        <p className=" mb-8 text-lg font-normal text-gray-700 md:px-6">
           {post.exerpt}
         </p>
         <div>

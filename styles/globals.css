@@ -2,22 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  background-color: rgb(53, 67, 255);
-  background: linear-gradient(-45deg, #0099ff, #000000, #0099ff);
-  /* background-size: 400% 400%; */
-  /* animation: gradient 2s ease infinite; */
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  background: #030303 linear-gradient(-40deg, #272727, #030303, #030303, #272727);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .glassmorphism {
   background: rgba(26, 26, 26, 0);

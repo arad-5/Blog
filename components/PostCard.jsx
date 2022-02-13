@@ -1,6 +1,7 @@
 import moment from 'moment'
 import Link from 'next/link'
 import { FcCalendar } from 'react-icons/fc'
+
 function PostCard({ post }) {
   return (
     <div className="mb-8 overflow-hidden rounded-lg bg-white p-0 pb-12 shadow-lg">

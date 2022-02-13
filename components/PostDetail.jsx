@@ -3,12 +3,12 @@ import moment from 'moment'
 import Post_paragraph from '../components/post_detail_text/index'
 const PostDetail = ({ post }) => {
   return (
-    <div className="mb-8 rounded-lg bg-white pb-10 shadow-lg lg:p-8">
+    <div className="glassmorphism mb-8 rounded-lg bg-white pb-10 shadow-lg lg:p-8 text-gray-400">
       <div className="relative mb-6 overflow-hidden shadow-md ">
         <img
           src={post.featuredImage.url}
           alt={post.title}
-          className="h-full w-full rounded-lg object-top"
+          className="h-full w-full rounded-lg object-top border border-[#ffffff1a]"
         />
       </div>
       <div className="px-4 lg:px-0 ">
@@ -33,7 +33,9 @@ const PostDetail = ({ post }) => {
         <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
         <div className="line-h-3 leading-7">
           {post.content.raw.children.map((paraObj, index) => (
-            <Post_paragraph key={index} text={paraObj} />
+            <div className="py-1">
+              <Post_paragraph key={index} text={paraObj} />
+            </div>
           ))}
         </div>
       </div>

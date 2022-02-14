@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
+import { submitComment } from '../services'
+
 
 const CommentsForm = ({ slug }) => {
   const [error, setError] = useState(false)
@@ -12,8 +14,9 @@ const CommentsForm = ({ slug }) => {
   const handleCommentSubmit = (e) => {
     setError(false)
     const { value: comment } = commentEl.current
-    const { value: name } = commentEl.current
+    const { value: name } = nameEl.current
     const { value: email } = emailEl.current
+    const { checked: storeData } = storeDataEl.current
 
     if (!comment || !nameEl || !emailEl) {
       setError(true)
@@ -26,11 +29,30 @@ const CommentsForm = ({ slug }) => {
       comment,
       slug,
     }
+    if (storeData) {
+      window.localStorage.setItem('name' , name)
+      window.localStorage.setItem('email' , email)
+    } else {
+      window.localStorage.removeItem('name' , name)
+      window.localStorage.removeItem('email' , email)
+    } 
+    submitComment(commentObj).then(res => {
+      setShowSuccessMessage(true);
+
+      setTimeout(() => {
+        setShowSuccessMessage(false)
+      }, 3000);
+    })
   }
 
+  useEffect(() => {
+    nameEl.current.value = window.localStorage.getItem("name")
+    emailEl.current.value = window.localStorage.getItem("email")
+  }, [])
+  
   return (
-    <div className="my-8 bg-white p-8 pb-12 shadow-lg">
-      <h3 className="mb-8 border-b pb-4 text-xl font-semibold">CommentsForm</h3>
+    <div className="my-8 bg-white p-8 pb-12 shadow-lg rounded-lg">
+      <h3 className="mb-8 border-b pb-4 text-xl font-semibold">Leave your comment</h3>
       <div className="mb-4 grid grid-cols-1 gap-4">
         <textarea
           ref={commentEl}
@@ -47,13 +69,15 @@ const CommentsForm = ({ slug }) => {
           className="py-2 "
           placeholder="Name:"
           name="name"
-        />
+          className="bg-gray-100 p-4 text-gray-800 outline-none focus:ring-2 focus:ring-gray-200 rounded-md"
+          />
         <input
           type="text"
           ref={emailEl}
           className="py-2"
           placeholder="Email:"
           name="email"
+          className="bg-gray-100 p-4 text-gray-800 outline-none focus:ring-2 focus:ring-gray-200 rounded-md"
         />
       </div>
 

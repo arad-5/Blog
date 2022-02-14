@@ -33,8 +33,8 @@ const PostDetail = ({ post }) => {
         <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
         <div className="line-h-3 leading-7">
           {post.content.raw.children.map((paraObj, index) => (
-            <div className="py-1">
-              <Post_paragraph key={index} text={paraObj} />
+            <div className="py-1" key={index}>
+              <Post_paragraph  text={paraObj} />
             </div>
           ))}
         </div>

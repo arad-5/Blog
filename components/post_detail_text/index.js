@@ -11,7 +11,6 @@ const Post_paragraph = ({ text }) => {
     ))
   } 
   else if (text.type === 'image') {
-    console.log(text)
     return <Asset asset={text} />
   }
   return null

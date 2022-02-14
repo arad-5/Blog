@@ -9,6 +9,7 @@ import {
 } from '../../components/componentsExporter'
 
 const PostDetails = ({ post }) => {
+  console.log(post);
   return (
     <div className="container mx-auto mb-8 px-2 md:px-10">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
@@ -16,7 +17,7 @@ const PostDetails = ({ post }) => {
           <PostDetail post={post} />
           <Author author={post.author} />
           <CommentsForm slug={post.slug} />
-          <Comments slug={post.slug} />
+          <Comments commentsData={post.comment} />
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative top-8 lg:sticky">

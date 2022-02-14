@@ -40,29 +40,34 @@ export const getPosts = async () => {
 export const getPostDetail = async (slug) => {
   const query = gql`
     query GetPostDetails($slug: String!) {
-      post(where: {slug: $slug}) {
-          author {
-            bio
-            name
-            id
-            photo {
-              url
-            }
-          }
-          createdAt
-          slug
-          title
-          exerpt
-          featuredImage {
+      post(where: { slug: $slug }) {
+        author {
+          bio
+          name
+          id
+          photo {
             url
           }
-          categories {
-            name
-            slug
-          }
-          content {
-            raw
-          }
+        }
+        createdAt
+        slug
+        title
+        exerpt
+        featuredImage {
+          url
+        }
+        categories {
+          name
+          slug
+        }
+        content {
+          raw
+        }
+        comment {
+          name
+          createdAt
+          comment
+        }
       }
     }
   `
@@ -91,7 +96,7 @@ export const getRecentPosts = async () => {
   return result.posts
 }
 
-export const getSimilarPosts = async (categories , slug) => {
+export const getSimilarPosts = async (categories, slug) => {
   const query = gql`
     query getPostsDetails($slug: String!, $categories: [String!]) {
       posts(
@@ -111,7 +116,7 @@ export const getSimilarPosts = async (categories , slug) => {
     }
   `
 
-  const result = await request(graphqlApi, query , {categories , slug})
+  const result = await request(graphqlApi, query, { categories, slug })
   return result.posts
 }
 
@@ -127,4 +132,15 @@ export const getCategories = async () => {
 
   const result = await request(graphqlApi, query)
   return result.categories
+}
+
+export const submitComment = async (obj) => {
+  const result = await fetch('/api/comments', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(obj),
+  })
+  return result
 }

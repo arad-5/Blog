@@ -1,6 +1,6 @@
 import { FcCalendar } from 'react-icons/fc'
 import moment from 'moment'
-import Post_paragraph from '../components/post_detail_text/index'
+import Post_paragraph from '../../components/post_detail_text/index'
 const PostDetail = ({ post }) => {
   return (
     <div className="glassmorphism mb-8 rounded-lg bg-white pb-10 shadow-lg lg:p-8 text-gray-400">

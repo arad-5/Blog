@@ -14,7 +14,7 @@ function Category() {
         Categories
       </h3>
       {categories.map(category => (
-        <Link key={category.slug} href={category.slug}>
+        <Link key={category.slug} href={`/categories/${category.slug}`}>
           <span className="cursor-pointer block pb-3 mb-3">
             {category.name}
           </span>

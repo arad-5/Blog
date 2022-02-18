@@ -17,7 +17,6 @@ export const getRecentPosts = async () => {
         }
       }
     `
-    console.log(graphqlApi, query)
     const result = await request(graphqlApi, query)
     return result.posts
-  }
+}

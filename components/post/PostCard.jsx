@@ -1,8 +1,9 @@
 import moment from 'moment'
 import Link from 'next/link'
 import { FcCalendar } from 'react-icons/fc'
-
+import { useRouter } from "next/router"
 function PostCard({ post }) {
+  const router = useRouter();
   return (
     <div className="mb-8 overflow-hidden rounded-lg bg-white p-0 pb-12 shadow-lg">
       <div className="mb6 relative  pb-80 shadow-md ">
@@ -25,10 +26,10 @@ function PostCard({ post }) {
               width="40px"
               className="rounded-full align-middle"
             />
-            <p className="ml-2 align-middle text-lg text-gray-700 ">
+            <p className="ml-2 align-middle text-lg text-gray-500 ">
               {post.author.name}
             </p>
-            <div className="flex items-center font-medium text-gray-700">
+            <div className="flex items-center font-medium text-gray-500">
               <FcCalendar />
               {moment(post.createdAt).format('MMM DD, YYYY')}
             </div>
@@ -38,11 +39,11 @@ function PostCard({ post }) {
           {post.exerpt}
         </p>
         <div>
-          <Link href={`/posts/${post.slug}`}>
+          <button onClick={() => router.push(`/posts/${post.slug}`)}>
             <span className="cursor-pointer rounded-md bg-blue-500 px-4 py-3 font-medium text-white">
               Read More
             </span>
-          </Link>
+          </button>
         </div>
       </div>
     </div>

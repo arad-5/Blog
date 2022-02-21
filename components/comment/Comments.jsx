@@ -7,9 +7,7 @@ const Comments = ({ commentsData }) => {
   useEffect(() => {
     setComments(commentsData)
   }, [])
-  useEffect(() => {
-    console.log(comments)
-  }, [comments])
+
   return (
     <>
       {comments.length > 0 && (

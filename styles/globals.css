@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("../components/progressBar/progressBar.css");
+
+
 body {
   background: #030303 linear-gradient(-40deg, #272727, #030303, #030303, #272727);
   background-repeat: no-repeat;

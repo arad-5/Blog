@@ -1,11 +1,15 @@
 import Header from './Header'
+import Progressbar from './progressBar/Progressbar'
+
 const Layout = ({ children }) => {
-  return (
-    <>
-      <Header />
-      {children}
-    </>
-  )
+
+    return (
+        <>
+            <Progressbar />
+            <Header />
+            {children}
+        </>
+    )
 }
 
 export default Layout

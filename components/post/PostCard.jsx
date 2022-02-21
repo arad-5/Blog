@@ -5,12 +5,12 @@ import { useRouter } from "next/router"
 function PostCard({ post }) {
   const router = useRouter();
   return (
-    <div className="mb-8 overflow-hidden rounded-lg bg-white p-0 pb-12 shadow-lg">
+    <div className="mb-8 rounded-lg bg-white p-0 pb-12 shadow-lg">
       <div className="mb6 relative  pb-80 shadow-md ">
         <img
           src={post.featuredImage.url}
           alt={post.title}
-          className="absolute  h-full w-full object-cover shadow-lg"
+          className="absolute  h-full w-full object-cover shadow-lg rounded-t-md"
         />
       </div>
       <div className="lg:px20 px-8">

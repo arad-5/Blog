@@ -6,16 +6,16 @@ import { PostCard } from '../../components/componentsExporter'
 const CategoryPost = ({ Categories }) => {
     const router = useRouter()
     const { post } = Categories.category
-    console.log(post)
+
     return (
         <div>
             <Head>
                 <title>{Categories.category.name}</title>
             </Head>
-            <div className="container mx-auto mb-8 px-2 md:px-10 grid grid-cols-2 gap-5">
-                    {post.map((post) => (
-                        <PostCard key={post.slug} post={post} />
-                    ))}
+            <div className="container mx-auto mb-8 grid grid-cols-1 md:grid-cols-2 gap-5 px-2 md:px-10 lg:grid-cols-3">
+                {post.map((post) => (
+                    <PostCard key={post.slug} post={post} />
+                ))}
             </div>
         </div>
     )

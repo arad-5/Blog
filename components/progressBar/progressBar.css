@@ -1,0 +1,36 @@
+@keyframes completed {
+    0% {
+        width: 90%;
+    }
+    50% {
+        width: 100%;
+        transform: none;
+    }
+    100% {
+        width: 100%;
+        transform:translateX(100%)
+    }
+}
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 40%;
+    }
+    60% {
+        width: 45%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+/* .progressBar-loading { background-color: #fff; }  */
+.progress-completed {
+    animation: completed 500ms forwards linear !important;
+}
+.progress-loading {
+    transition: 400ms;
+    animation: loading 2s ease-in-out forwards !important;
+}

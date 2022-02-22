@@ -6,6 +6,7 @@
         transform: scale(1);
     }
 }
+
 @keyframes closed {
     from {
         transform: scale(1);
@@ -15,9 +16,9 @@
     }
 }
 
-.header-categories-opened {
-    animation: opened 200ms ease-in-out forwards;
+.window-opened {
+    animation: opened 100ms ease-in-out forwards;
 }
-.header-categories-closed {
+.window-closed {
     animation: closed 100ms ease-in-out forwards;
 }

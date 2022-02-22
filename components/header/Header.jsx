@@ -1,11 +1,7 @@
-import { useState } from 'react'
 import Link from 'next/link'
-import { BiCategory, BiSearch, BiX } from 'react-icons/bi'
-import Category from '../Category'
-import { useRouter } from 'next/router'
+import Categories from './Categories'
+import Search from './search/Search'
 const Header = () => {
-    const [toggleCategories, setToggleCategories] = useState(false)
-    
     return (
         <div className="container mx-auto mb-8 px-10">
             <div className=" flex h-[5rem] w-full items-center justify-between border-b border-blue-400">
@@ -29,41 +25,9 @@ const Header = () => {
                         </svg>
                     </Link>
                 </div>
-                <div className="float-right flex space-x-10">
-                    {!(
-                        useRouter().pathname === '/categories' ||
-                        useRouter().pathname === '/categories/[slug]'
-                    ) && (
-                        <div className=" relative flex items-center justify-center">
-                            <button
-                                className={`z-20 cursor-pointer text-[2rem] ${
-                                    toggleCategories &&
-                                    'rounded-tr-md rounded-bl-md bg-red-500'
-                                }`}
-                                onClick={() =>
-                                    setToggleCategories((curr) => !curr)
-                                }
-                            >
-                                {toggleCategories ? (
-                                    <BiX className=" text-white" />
-                                ) : (
-                                    <BiCategory className="text-blue-400" />
-                                )}
-                            </button>
-                            <div
-                                className={`absolute top-0 right-0 z-10 w-[60vw] scale-0  ${
-                                    toggleCategories
-                                        ? 'header-categories-opened'
-                                        : 'header-categories-closed'
-                                }`}
-                            >
-                                <Category />
-                            </div>
-                        </div>
-                    )}
-                    <button className="flex items-center justify-center rounded-full text-[2rem] text-blue-400">
-                        <BiSearch />
-                    </button>
+                <div className="float-right flex items-center space-x-10 h-full">
+                    <Categories />
+                    <Search />
                 </div>
             </div>
         </div>

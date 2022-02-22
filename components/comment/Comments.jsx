@@ -11,7 +11,7 @@ const Comments = ({ commentsData }) => {
   return (
     <>
       {comments.length > 0 && (
-        <div className="mb-8 rounded-lg bg-white p-8 pb-12 shadow-lg">
+        <div className="rounded-lg bg-white p-8 pb-8 shadow-lg">
           <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
             {comments.length} comments
           </h3>

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("../components/progressBar/progressBar.css");
+@import url("../components/header/header-animations.css");
 
 
 body {

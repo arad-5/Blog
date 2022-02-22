@@ -1,4 +1,4 @@
-import Header from './Header'
+import Header from './header/Header'
 import Progressbar from './progressBar/Progressbar'
 
 const Layout = ({ children }) => {

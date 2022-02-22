@@ -1,0 +1,23 @@
+@keyframes opened {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes closed {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+.header-categories-opened {
+    animation: opened 200ms ease-in-out forwards;
+}
+.header-categories-closed {
+    animation: closed 100ms ease-in-out forwards;
+}

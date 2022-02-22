@@ -15,7 +15,7 @@ const index = () => {
     return (
         <div className="container mx-auto mb-8 grid grid-cols-3 px-10">
             {categories.map((category) => (
-                <CategoryCard category={category} />
+                <CategoryCard category={category} key={category.slug} />
             ))}
         </div>
     )

@@ -9,6 +9,7 @@ const Progressbar = () => {
         const handleRouteComplete = () => setLoading('completed')
         router.events.on('routeChangeStart', handleRouteChange)
         router.events.on('routeChangeComplete', handleRouteComplete)
+        console.log(router);
         return () => {
             router.events.off('routeChangeStart', handleRouteChange)
             router.events.off('hashChangeComplete', handleRouteComplete)

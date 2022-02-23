@@ -8,6 +8,8 @@ import {
 import { getPosts } from '../services'
 
 export default function Home({ posts }) {
+
+    
     return (
         <div className="container mx-auto mb-8 px-10">
             <Head>

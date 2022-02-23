@@ -1,10 +1,9 @@
 import moment from 'moment'
 import Link from 'next/link'
 import { FcCalendar } from 'react-icons/fc'
-import { useRouter } from 'next/router'
 import PrimaryButton from '../buttons/PrimaryButton'
+
 function PostCard({ post }) {
-    const router = useRouter()
     return (
         <div className="mb-8 rounded-lg bg-white p-0 pb-12 shadow-lg">
             <div className="mb6 relative  pb-80 shadow-md ">

@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react'
-import { BiSearch, BiX } from 'react-icons/bi'
-import { postSearch } from '../../../services'
+import { useState } from 'react'
+import { BiSearch, BiX , BiChevronRight} from 'react-icons/bi'
 import Results from './Results'
 const Search = () => {
     const [toggle, setToggle] = useState(false)
@@ -23,7 +22,7 @@ const Search = () => {
             <div
                 className={`absolute top-0 right-0 z-10 w-[80vw] max-w-lg rounded-lg border bg-white p-3 ${
                     toggle ? 'window-opened' : 'window-closed'
-                }`}
+                } shadow-lg`}
             >
                 <form
                     onSubmit={(e) => e.preventDefault()}

@@ -11,7 +11,7 @@ const Categories = () => {
                 useRouter().pathname === '/categories' ||
                 useRouter().pathname === '/categories/[slug]'
             ) && (
-                <div className="relative flex">
+                <div className="relative flex z-10">
                     <button
                         className={`z-20 cursor-pointer text-[2rem] ${
                             toggleCategories &&
@@ -26,7 +26,7 @@ const Categories = () => {
                         )}
                     </button>
                     <div
-                        className={`absolute top-0 right-0 z-10 w-[60vw] max-w-lg ${
+                        className={`absolute top-0 right-0 z-10 w-[60vw] max-w-sm ${
                             toggleCategories
                                 ? 'window-opened'
                                 : 'window-closed'

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getCategories } from '../../services/getCategories'
-import CategoryCard from './_categoryCard'
+import CategoryLinkButton from '../../components/CategoryLinkButton'
 
 const index = () => {
     const [categories, setCategories] = useState([])
@@ -13,9 +13,9 @@ const index = () => {
 
     console.log(categories.map(({ slug }) => ({ params: { slug } })))
     return (
-        <div className="container mx-auto mb-8 grid grid-cols-3 px-10">
+        <div className="container mx-auto mb-8 grid grid-cols-3 px-10 gap-6">
             {categories.map((category) => (
-                <CategoryCard category={category} key={category.slug} />
+                <CategoryLinkButton category={category} path={`/categories/${category.slug}`} key={category.slug} />
             ))}
         </div>
     )

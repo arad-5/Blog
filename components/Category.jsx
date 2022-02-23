@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { getCategories } from '../services'
 import PrimaryButton from '../components/buttons/PrimaryButton'
+import CategoryLinkButton from './CategoryLinkButton'
+
 function Category() {
     const [categories, setCategories] = useState([])
 
@@ -15,13 +17,15 @@ function Category() {
                 Categories
             </h3>
             {categories.map((category) => (
-                <Link key={category.slug} href={`/categories/${category.slug}`}>
-                    <span className=" block cursor-pointer pb-6">
-                        {category.name}
-                    </span>
-                </Link>
+                <CategoryLinkButton
+                    category={category}
+                    key={category.slug}
+                    path={`/categories/${category.slug}`}
+                />
             ))}
-            <PrimaryButton path="/categories" additionalStyle="mt-3">All categories</PrimaryButton>
+            <PrimaryButton path="/categories" additionalStyle="mt-3">
+                All categories
+            </PrimaryButton>
         </div>
     )
 }

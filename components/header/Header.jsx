@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Categories from './Categories'
 import Search from './search/Search'
+import Authors from './Authors'
+
 const Header = () => {
     return (
         <div className="container mx-auto mb-8 px-10">
@@ -25,7 +27,8 @@ const Header = () => {
                         </svg>
                     </Link>
                 </div>
-                <div className="float-right flex items-center space-x-10 h-full">
+                <div className="float-right flex items-center space-x-10 h-full sticky top-0 left-0 z-50">
+                    <Authors />
                     <Categories />
                     <Search />
                 </div>

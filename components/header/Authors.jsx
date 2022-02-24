@@ -31,7 +31,7 @@ const Authors = () => {
             <div
                 className={`absolute top-0 right-0 z-10 w-[60vw] max-w-sm p-8 ${
                     toggle ? 'window-opened' : 'window-closed'
-                } w-96 rounded-lg bg-white shadow-lg`}
+                } glassmorphism w-96 rounded-lg  shadow-lg`}
             >
                 <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
                     Authors

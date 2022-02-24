@@ -20,9 +20,9 @@ const Search = () => {
                 )}
             </button>
             <div
-                className={`absolute top-0 right-0 z-10 w-[80vw] max-w-lg rounded-lg border bg-white p-3 ${
+                className={`absolute top-0 right-0 z-10 w-[80vw] max-w-lg rounded-lg border  p-3 ${
                     toggle ? 'window-opened' : 'window-closed'
-                } shadow-lg`}
+                } shadow-lg glassmorphism`}
             >
                 <form
                     onSubmit={(e) => e.preventDefault()}
@@ -78,7 +78,7 @@ const Search = () => {
                     {toggle && (
                         <input
                             type="search"
-                            className="h-12 rounded-xl bg-gray-200 p-5  hover:bg-gray-300 focus:border-2 focus:border-blue-500 focus:bg-gray-100 focus:outline-blue-400 focus:ring-4"
+                            className="h-12 rounded-xl bg-gray-200 p-5  hover:bg-gray-300 focus:border-2 focus:border-blue-500 focus:bg-gray-100 focus:outline-blue-400 focus:ring-4 dark:glassmorphism"
                             placeholder="search"
                             autoFocus
                             pattern="^[a-zA-Z*|0-9*|\s*]{0,}"

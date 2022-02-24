@@ -1,23 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("../components/progressBar/progressBar.css");
-@import url("../components/header/header-animations.css");
+@layer base {
+    .glassmorphism {
+        background: rgba(26, 26, 26, 0);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.37);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+}
 
-
+@import url('../components/progressBar/progressBar.css');
+@import url('../components/header/header-animations.css');
 body {
-  background: #030303 linear-gradient(-40deg, #272727, #030303, #030303, #272727);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    background: #030303
+        linear-gradient(-40deg, #272727, #030303, #030303, #272727);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-.glassmorphism {
-  background: rgba(26, 26, 26, 0);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+
+
+a {
+    cursor: pointer !important;
 }
-input:focus {
-  outline: none;
+
+@keyframes shimmer {
+    0% {
+        background-position: -1200px 0;
+    }
+    100% {
+        background-position: 1200px 0;
+    }
+}
+
+.shimmerBG {
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background: #ddd;
+    background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+    background-size: 1200px 100%;
 }

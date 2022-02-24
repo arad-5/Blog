@@ -26,7 +26,7 @@ const Categories = () => {
                         )}
                     </button>
                     <div
-                        className={`absolute top-0 right-0 z-10 w-[60vw] max-w-sm ${
+                        className={`absolute top-0 right-0 z-10 w-[60vw] max-w-md ${
                             toggleCategories
                                 ? 'window-opened'
                                 : 'window-closed'

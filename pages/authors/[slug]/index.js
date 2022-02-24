@@ -20,11 +20,11 @@ const slug = ({ author }) => {
     }
 
     return (
-        <div className="container mx-auto mb-8 xl:grid grid-cols-3 gap-10 px-10 text-xl text-slate-400">
-            <div className="col-span-1 mb-5 xl:mb-0 col-start-1 xl:sticky top-8 ">
+        <div className="container mx-auto mb-8 grid-cols-3 gap-10 px-10 text-xl text-slate-400 xl:grid">
+            <div className="top-8 col-span-1 xl:h-44 mb-5 xl:sticky xl:mb-0 ">
                 <_profile author={author} />
+                <_categoriesPosted categories={uniqueCategories} />
             </div>
-            <_categoriesPosted categories={uniqueCategories} />
             <_posts posts={author.post} />
         </div>
     )

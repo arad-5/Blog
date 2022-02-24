@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Author = ({ author }) => {
   return (
-    <div className="glassmorphism  mx-auto flex max-w-[25rem] flex-col items-center p-3 text-gray-300">
+    <div className="glassmorphism mx-auto flex max-w-[25rem] flex-col items-center p-3 dark:text-gray-300">
       <Image
         src={author.photo.url}
         alt={author.name}

@@ -13,7 +13,7 @@ const CategoryPost = ({ Categories }) => {
             <Head>
                 <title>{Categories.category.name}</title>
             </Head>
-            <div className="container mx-auto mb-8 grid grid-cols-1 md:grid-cols-2 gap-5 px-2 md:px-10 lg:grid-cols-3">
+            <div className="container mx-auto mb-8 grid grid-cols-1 md:grid-cols-2 gap-5 px-2 md:px-10">
                 {post.map((post) => (
                     <PostCard key={post.slug} post={post} />
                 ))}

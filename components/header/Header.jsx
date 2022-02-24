@@ -3,7 +3,7 @@ import Categories from './Categories'
 import Search from './search/Search'
 import Authors from './Authors'
 
-const Header = () => {
+const Header = ({isThemeDark , setIsThemeDark}) => {
     return (
         <div className="container mx-auto mb-8 px-10">
             <div className=" flex h-[5rem] w-full items-center justify-between border-b border-blue-400">
@@ -27,7 +27,8 @@ const Header = () => {
                         </svg>
                     </Link>
                 </div>
-                <div className="float-right flex items-center space-x-10 h-full sticky top-0 left-0 z-50">
+                <div className="sticky top-0 left-0 z-50 float-right flex h-full items-center space-x-10">
+                    <button className="bg-white p-2 rounded-md" onClick={() => setIsThemeDark(curr => !curr)}>theme</button>
                     <Authors />
                     <Categories />
                     <Search />

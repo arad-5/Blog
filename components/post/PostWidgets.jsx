@@ -4,7 +4,7 @@ import PostRowLink from '../PostRowLink'
 
 function PostWidgets({ categories, slug }) {
     const [relatedPosts, setRelatedPosts] = useState([])
-    useEffect(() => {}, [])
+
     useEffect(() => {
         if (slug) {
             getSimilarPosts(categories, slug).then((result) =>
@@ -16,7 +16,7 @@ function PostWidgets({ categories, slug }) {
     }, [slug])
 
     return (
-        <div className="mb-8 rounded-lg bg-white p-8 shadow-lg">
+        <div className="mb-8 rounded-lg p-8 shadow-lg glassmorphism">
             <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
                 {slug ? 'Realated posts' : 'Recent posts'}
             </h3>

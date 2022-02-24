@@ -1,6 +1,6 @@
 import { getAuthorDetail } from '../../../services/getAuthorDetail'
 import { getAuthors } from '../../../services/getAuthors'
-import _profile from './_profile'
+import Profile from '../../../components/Profile'
 import _categoriesPosted from './_categoriesPosted'
 import _posts from './_posts'
 
@@ -22,7 +22,7 @@ const slug = ({ author }) => {
     return (
         <div className="container mx-auto mb-8 grid-cols-3 gap-10 px-10 text-xl text-slate-400 xl:grid">
             <div className="top-8 col-span-1 xl:h-44 mb-5 xl:sticky xl:mb-0 ">
-                <_profile author={author} />
+                <Profile author={author} />
                 <_categoriesPosted categories={uniqueCategories} />
             </div>
             <_posts posts={author.post} />

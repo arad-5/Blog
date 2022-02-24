@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-const _profile = ({ author }) => {
+const Profile = ({ author }) => {
     return (
         <div className="glassmorphism p-4">
             <div className="mb-5 flex items-center space-x-8">
@@ -20,4 +20,4 @@ const _profile = ({ author }) => {
     )
 }
 
-export default _profile
+export default Profile

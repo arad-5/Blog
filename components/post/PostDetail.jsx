@@ -1,7 +1,5 @@
-import { FcCalendar } from 'react-icons/fc'
-import moment from 'moment'
 import Post_paragraph from '../../components/post_detail_text/index'
-import _profile from '../../pages/authors/[slug]/_profile'
+import Profile from '../../components/profile'
 
 const PostDetail = ({ post }) => {
     return (
@@ -15,7 +13,7 @@ const PostDetail = ({ post }) => {
             </div>
             <div className="px-4 lg:px-0 ">
                 <div className="mb-8 flex w-full items-center">
-                    <_profile author={post.author} />
+                    <Profile author={post.author} />
                 </div>
                 <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
                 <div className="line-h-3 leading-7">

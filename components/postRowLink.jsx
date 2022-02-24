@@ -4,7 +4,7 @@ import moment from 'moment'
 const PostRowLink = ({ post }) => {
     return (
         <Link href={`/posts/${post.slug}`} >
-            <div key={post.title} className="mb-3 flex w-full items-center cursor-pointer">
+            <div key={post.title} className="mb-3 flex w-full items-center cursor-pointer ">
                 <div className="w-16 flex-none">
                     <img
                         src={post.featuredImage.url}

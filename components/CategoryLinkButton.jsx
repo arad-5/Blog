@@ -5,7 +5,7 @@ const CategoryLinkButton = ({ category, path }) => {
     const handleLink = () => router.replace(path)
     return (
         <button
-            className="relative m-2 flex h-[3.6rem] w-[10rem] cursor-pointer items-center rounded-2xl bg-white p-3 text-slate-700"
+            className="relative m-2 flex h-[3.6rem] w-[10rem] cursor-pointer items-center rounded-2xl bg-white p-3 text-slate-700 dark:Neumorphism"
             onClick={() => handleLink()}
         >
             <img

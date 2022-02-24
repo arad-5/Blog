@@ -10,6 +10,10 @@
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
     }
+    .Neumorphism {
+        background: #ffffff;
+        box-shadow: inset -17px 17px 34px #b8b8b8, inset 17px -17px 34px #ffffff;
+    }
 }
 
 @import url('../components/progressBar/progressBar.css');
@@ -20,7 +24,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
 
 a {
     cursor: pointer !important;

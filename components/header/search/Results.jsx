@@ -13,10 +13,6 @@ const Results = ({ query }) => {
         typeof query === 'string' && handleSearch(query)
     }, [query])
 
-    // useEffect(() => {
-    //     console.log(searchResults)
-    // }, [searchResults])
-
     return (
         <div>
             {searchResults.posts &&

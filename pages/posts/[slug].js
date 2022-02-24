@@ -7,7 +7,7 @@ import {
     CommentsForm,
     Author,
 } from '../../components/componentsExporter'
-import _profile from '../authors/[slug]/_profile'
+import Profile from '../../components/Profile'
 
 const PostDetails = ({ post }) => {
     return (
@@ -16,7 +16,7 @@ const PostDetails = ({ post }) => {
                 <div className="col-span-1 lg:col-span-8">
                     <PostDetail post={post} />
                     <div className="flex justify-center">
-                        <_profile author={post.author} />
+                        <Profile author={post.author} />
                     </div>
                     <CommentsForm slug={post.slug} />
                     <Comments commentsData={post.comment} />

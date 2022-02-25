@@ -11,7 +11,6 @@ const index = () => {
         categoriesFetcher()
     }, [])
 
-    console.log(categories.map(({ slug }) => ({ params: { slug } })))
     return (
         <div className="container mx-auto mb-8 grid grid-cols-3 px-10 gap-6">
             {categories.map((category) => (
@@ -23,9 +22,3 @@ const index = () => {
 
 export default index
 
-// export const getStaticProps = async () => {
-//     const categories = (await getCategories()) || []
-//     return {
-//         props: { categories },
-//     }
-// }

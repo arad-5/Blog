@@ -9,18 +9,18 @@ import { getPosts } from '../services'
 
 export default function Home({ posts }) {
     return (
-        <div className="container mx-auto pb-8 px-10 ">
+        <div className="mx-auto pb-8 px-4 md:px-8">
             <Head>
                 <title>Arad Blog</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="grid grid-cols-1 lg:grid-cols-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-7">
                 <div className="col-span-1 lg:col-span-6 ">
                     {posts.map((post) => (
                         <PostCard key={post.node.slug} post={post.node} />
                     ))}
                 </div>
-                <div className="col-span-1 lg:col-span-6 lg:px-10">
+                <div className="col-span-1 lg:col-span-6">
                     <div className="relative top-8 lg:sticky">
                         <PostWidgets />
                         <Category />

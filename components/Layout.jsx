@@ -3,7 +3,7 @@ import Header from './header/Header'
 import Progressbar from './progressBar/Progressbar'
 
 const Layout = ({ children }) => {
-    const [isThemeDark, setIsThemeDark] = useState(false)
+    const [isThemeDark, setIsThemeDark] = useState(true)
     return (
         <>
             <Progressbar />

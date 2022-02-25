@@ -1,5 +1,6 @@
 import moment from 'moment'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FcCalendar } from 'react-icons/fc'
 import PrimaryButton from '../buttons/PrimaryButton'
 
@@ -7,7 +8,8 @@ function PostCard({ post }) {
     return (
         <div className="glassmorphism  mb-8 rounded-lg p-0 pb-12 shadow-lg">
             <div className="mb6 relative  pb-80 shadow-md ">
-                <img
+                <Image
+                    layout="fill"
                     src={post.featuredImage.url}
                     alt={post.title}
                     className="absolute  h-full w-full rounded-t-md object-cover shadow-lg"
@@ -18,11 +20,12 @@ function PostCard({ post }) {
                     <Link href={`/posts/${post.slug}`}>{post.title}</Link>
                 </h1>
                 <div className="mb-8 flex w-full items-center">
-                    <img
+                    <Image
+                        unoptimized
                         src={post.author.photo.url}
                         alt={post.author.name}
-                        height="40px"
-                        width="40px"
+                        height="50px"
+                        width="50px"
                         className="rounded-full align-middle"
                     />
                     <div className="ml-5">

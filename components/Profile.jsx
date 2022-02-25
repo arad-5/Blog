@@ -1,10 +1,14 @@
+import Image from 'next/image'
 import moment from 'moment'
 
 const Profile = ({ author }) => {
     return (
         <div className="glassmorphism p-4">
             <div className="mb-5 flex items-center space-x-8">
-                <img
+                <Image
+                    unoptimized
+                    width="60px"
+                    height="60px"
                     src={author.photo.url}
                     alt={author.name}
                     className="h-[4rem] w-[4rem] rounded-full"

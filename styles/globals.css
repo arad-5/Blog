@@ -18,6 +18,7 @@
 
 @import url('../components/progressBar/progressBar.css');
 @import url('../components/header/header-animations.css');
+
 body {
     background: #030303
         linear-gradient(-40deg, #272727, #030303, #030303, #272727);

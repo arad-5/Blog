@@ -3,6 +3,7 @@ import { getAuthors } from '../../services/getAuthors'
 import { FaKeyboard } from 'react-icons/fa'
 import { BiX } from 'react-icons/bi'
 import Link from 'next/link'
+import Image from 'next/image'
 const Authors = () => {
     const [authors, setAuthors] = useState([])
     const [toggle, setToggle] = useState(false)
@@ -12,7 +13,7 @@ const Authors = () => {
         }
         fetch()
     }, [])
-    console.log()
+
     return (
         <div className="relative z-[5] flex">
             <button
@@ -39,7 +40,10 @@ const Authors = () => {
                 {authors.map((author) => (
                     <Link href={`/authors/${author.id}`} key={author.id}>
                         <div className="flex cursor-pointer items-center">
-                            <img
+                            <Image
+                                unoptimized
+                                width="60px"
+                                height="60px"
                                 src={author.photo.url}
                                 className="h-[3.5rem] w-[3.5rem]  rounded-full"
                                 alt={author.name}

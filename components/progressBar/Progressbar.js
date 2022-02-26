@@ -15,7 +15,7 @@ const Progressbar = () => {
             router.events.off('hashChangeComplete', handleRouteComplete)
             router.events.off('hashChangeStart', setLoading(false))
         }
-    }, [])
+    }, [router.events])
 
     return (
         <div

@@ -1,11 +1,9 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { getCategories, getCategoryPosts } from '../../services'
 import { PostCard } from '../../components/componentsExporter'
 
 const CategoryPost = ({ Categories }) => {
-    const router = useRouter()
     const { post } = Categories.category
 
     return (

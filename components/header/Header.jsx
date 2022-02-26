@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Categories from './Categories'
 import Search from './search/Search'
 import Authors from './Authors'
+import {useRouter} from 'next/router'
 
 const Header = ({isThemeDark , setIsThemeDark}) => {
     return (
@@ -9,7 +10,8 @@ const Header = ({isThemeDark , setIsThemeDark}) => {
             <div className=" flex h-[5rem] w-full items-center justify-between border-b border-blue-400">
                 <div className="md:float-left">
                     <Link href="/">
-                        <svg
+                       <a>
+                       <svg
                             xmlns="http://www.w3.org/2000/svg"
                             x="0"
                             y="0"
@@ -24,12 +26,13 @@ const Header = ({isThemeDark , setIsThemeDark}) => {
                                 fill="currentColor "
                             ></path>
                         </svg>
+                       </a>
                     </Link>
                 </div>
                 <div className="sticky top-0 left-0 z-50 float-right flex h-full items-center space-x-10">
                     <button className="bg-white p-2 rounded-md" onClick={() => setIsThemeDark(curr => !curr)}>theme</button>
                     <Authors />
-                    <Categories />
+                    {!(useRouter().pathname === '/categories') && <Categories/>}
                     <Search />
                 </div>
             </div>

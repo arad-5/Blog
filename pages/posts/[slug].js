@@ -18,8 +18,7 @@ const PostDetails = ({ post }) => {
                     <div className="flex justify-center">
                         <Profile author={post.author} />
                     </div>
-                    <CommentsForm slug={post.slug} />
-                    <Comments commentsData={post.comment} />
+                    <CommentsForm slug={post.slug} /> 
                 </div>
                 <div className="col-span-1 lg:col-span-4">
                     <div className="relative top-8 lg:sticky">

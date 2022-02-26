@@ -13,7 +13,7 @@ function PostWidgets({ categories, slug }) {
         } else {
             getRecentPosts().then((result) => setRelatedPosts(result))
         }
-    }, [slug])
+    }, [slug , categories])
 
     return (
         <div className="mb-8 rounded-lg p-8 shadow-lg glassmorphism ">

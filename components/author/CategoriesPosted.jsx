@@ -1,7 +1,7 @@
-import CategoryLinkButton from '../../../components/CategoryLinkButton'
+import CategoryLinkButton from '../CategoryLinkButton'
 
-const _categoriesPosted = ({ categories }) => {
-    // console.log(categories)
+const CategoriesPosted = ({ categories }) => {
+    
     return (
         <div className="glassmorphism p-4 my-5 xl:mb-0">
             <span className="font-bold dark:text-slate-200">
@@ -20,4 +20,4 @@ const _categoriesPosted = ({ categories }) => {
     )
 }
 
-export default _categoriesPosted
+export default CategoriesPosted

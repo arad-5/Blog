@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { getCategories } from '../../services/getCategories'
 import CategoryLinkButton from '../../components/CategoryLinkButton'
 
-const index = () => {
+const Index = () => {
     const [categories, setCategories] = useState([])
     const categoriesFetcher = async () => {
         setCategories(await getCategories())
@@ -20,5 +20,5 @@ const index = () => {
     )
 }
 
-export default index
+export default Index
 

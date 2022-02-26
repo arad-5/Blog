@@ -3,7 +3,6 @@ import { submitComment } from '../../services/submitComment'
 
 const CommentsForm = ({ slug }) => {
     const [error, setError] = useState(false)
-    const [loclaStorage, setLoclaStorage] = useState(null)
     const [showSuccessMessage, setShowSuccessMessage] = useState(false)
     const commentEl = useRef()
     const nameEl = useRef()
@@ -67,18 +66,16 @@ const CommentsForm = ({ slug }) => {
                 <input
                     type="text"
                     ref={nameEl}
-                    className="py-2 "
                     placeholder="Name:"
                     name="name"
-                    className="rounded-md bg-gray-100 p-4 text-gray-800 outline-none focus:ring-2 focus:ring-gray-200 dark:text-slate-300"
+                    className="rounded-md bg-gray-100 p-4 text-gray-800 outline-none focus:ring-2 focus:ring-gray-200 dark:text-slate-300 py-2"
                 />
                 <input
                     type="text"
                     ref={emailEl}
-                    className="py-2"
                     placeholder="Email:"
                     name="email"
-                    className="rounded-md bg-gray-100 p-4 text-gray-800 outline-none focus:ring-2 focus:ring-gray-200"
+                    className="rounded-md bg-gray-100 p-4 text-gray-800 outline-none focus:ring-2 focus:ring-gray-200 py-2"
                 />
             </div>
 

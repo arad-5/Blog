@@ -1,5 +1,5 @@
 import Post_paragraph from '../../components/post_detail_text/index'
-import Profile from '../../components/profile'
+import Profile from '../../components/Profile'
 import Image from 'next/image'
 
 const PostDetail = ({ post }) => {

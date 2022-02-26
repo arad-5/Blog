@@ -9,7 +9,7 @@ import { getPosts } from '../services'
 
 const Home = ({ posts }) => {
     return (
-        <div className="mx-auto px-4 pb-8 md:px-8">
+        <div className="mx-auto px-4 pb-8 md:px-8 lg:container">
             <Head>
                 <title>Arad Blog</title>
                 <link rel="icon" href="/favicon.ico" />

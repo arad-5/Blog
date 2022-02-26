@@ -1,5 +1,4 @@
-import styles from './theme.module.css'
-
+import { BsMoonFill } from 'react-icons/bs'
 const Theme = ({ setIsThemeDark, isThemeDark }) => {
     return (
         <button
@@ -8,13 +7,15 @@ const Theme = ({ setIsThemeDark, isThemeDark }) => {
         >
             <div
                 className={`h-16 w-16 ${
-                    isThemeDark ? styles.dark : styles.light
-                } ${styles.circle}`}
+                    isThemeDark ? "rotate-180" : "rotate-0"
+                } transition duration-200`}
             >
-                <div className={`h-[2rem] w-[2rem] rounded-full ${styles.sun}`}></div>
                 <div
-                    className={`h-[2rem] w-[2rem] rounded-full bg-slate-300 ${styles.moon}`}
+                    className="h-[2rem] w-[2rem] rounded-full  bg-gradient-to-b from-orange-300 to-pink-500"
                 ></div>
+                <BsMoonFill
+                    className="text-[2rem] rounded-full rotate-[180deg] ml-auto"
+                />
             </div>
         </button>
     )

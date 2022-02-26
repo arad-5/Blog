@@ -5,13 +5,13 @@ import { BiX } from 'react-icons/bi'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Authors = () => {
+const Authors = ({ windowsToggle, setWindowsToggle }) => {
+    const toggle = windowsToggle.authors
     const [authors, setAuthors] = useState([])
-    const [toggle, setToggle] = useState(false)
 
     useEffect(() => {
         const fetch = async () => {
-            const authors = (({ authors } = await getAuthors()))
+            const authors = ({ authors } = await getAuthors())
             setAuthors(authors)
         }
         fetch()
@@ -23,7 +23,15 @@ const Authors = () => {
                 className={`z-20 cursor-pointer text-[2rem] ${
                     toggle && 'rounded-tr-md rounded-bl-md bg-red-500'
                 }`}
-                onClick={() => setToggle((curr) => !curr)}
+                onClick={() => {
+                    setWindowsToggle((curr) =>
+                        setWindowsToggle({
+                            authors: !curr.authors,
+                            categories: false,
+                            search: false,
+                        })
+                    )
+                }}
             >
                 {toggle ? (
                     <BiX className=" text-white" />

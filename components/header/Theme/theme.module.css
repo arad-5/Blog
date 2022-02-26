@@ -1,0 +1,16 @@
+.circle {
+    transition: transform 200ms ease-in-out;
+}
+.light {
+    transform: rotate(0deg);
+}
+.dark {
+    transform: rotate(180deg);
+}
+.sun {
+    background: linear-gradient(180deg , #FFCC33 ,#FC9601 );
+}
+.moon {
+    background: linear-gradient(45deg , #cbd5e1 ,#94a3b8 , #334155 );
+    margin-left: auto;
+}

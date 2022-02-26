@@ -7,14 +7,14 @@ import {
 
 import { getPosts } from '../services'
 
-export default function Home({ posts }) {
+const Home = ({ posts }) => {
     return (
-        <div className="mx-auto pb-8 px-4 md:px-8">
+        <div className="mx-auto px-4 pb-8 md:px-8">
             <Head>
                 <title>Arad Blog</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-7">
+            <div className="grid grid-cols-1 gap-7 lg:grid-cols-12">
                 <div className="col-span-1 lg:col-span-6 ">
                     {posts.map((post) => (
                         <PostCard key={post.node.slug} post={post.node} />
@@ -30,6 +30,8 @@ export default function Home({ posts }) {
         </div>
     )
 }
+
+export default Home
 
 export async function getStaticProps() {
     const posts = (await getPosts()) || []

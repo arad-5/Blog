@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 const Progressbar = () => {
     const [loading, setLoading] = useState(true)
     const router = useRouter()
+
     useEffect(() => {
         const handleRouteChange = () => setLoading(true)
         const handleRouteComplete = () => setLoading('completed')
@@ -19,8 +20,11 @@ const Progressbar = () => {
 
     return (
         <div
-            className={`fixed top-0 z-40 h-[2px] bg-blue-500  ${
-                loading && (loading === 'completed' ? 'progress-completed' : 'progress-loading')
+            className={`fixed bottom-0 z-40 w-1 bg-red-500  ${
+                loading &&
+                (loading === 'completed'
+                    ? 'progress-completed'
+                    : 'progress-loading')
             }`}
         ></div>
     )

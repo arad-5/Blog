@@ -2,11 +2,12 @@ import Image from 'next/image'
 
 const Asset = ({ asset }) => {
     return (
-        <div className="relative h-96">
+        <div className="my-5">
             <Image
-                unoptimized
-                layout="fill"
-                className="my-5 rounded-md object-cover"
+                layout="responsive"
+                className="rounded-md object-contain"
+                width={240}
+                height={135}
                 src={asset.src}
                 alt={asset.alt}
             />

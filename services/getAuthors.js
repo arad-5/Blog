@@ -14,5 +14,5 @@ export const getAuthors = async () => {
             }
         }
     `
-    return await request(graphqlApi, query)
+    return await request(graphqlApi, query).catch(err => console.log(err))
 }

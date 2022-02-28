@@ -18,10 +18,11 @@ const Authors = ({ windowsToggle, setWindowsToggle }) => {
     }, [])
 
     return (
-        <div className="relative z-[5] flex">
+        <div className={`${toggle ? 'z-50' : "z-[5]"} flex border sm:relative`}>
             <button
                 className={`z-20 cursor-pointer text-[2rem] ${
-                    toggle && 'rounded-tr-md rounded-bl-md bg-red-500'
+                    toggle &&
+                    'absolute top-[1.5rem] -right-6  rounded-tr-md rounded-bl-md bg-red-500 sm:static'
                 }`}
                 onClick={() => {
                     setWindowsToggle((curr) =>
@@ -41,7 +42,7 @@ const Authors = ({ windowsToggle, setWindowsToggle }) => {
             </button>
 
             <div
-                className={`absolute top-0 right-0 z-10 w-[60vw] max-w-sm p-8 ${
+                className={`absolute top-[1.5rem] -right-6 z-10 w-[20rem] max-w-sm p-8 sm:top-0 sm:right-0 ${
                     toggle ? 'window-opened' : 'window-closed'
                 } glassmorphism w-96 rounded-lg  shadow-lg`}
             >

@@ -24,8 +24,8 @@ const Header = ({ isThemeDark, setIsThemeDark }) => {
                 })
             }}
         >
-            <div className="container mx-auto mb-8 px-10">
-                <div className=" flex h-[5rem] w-full items-center justify-between border-b border-blue-400">
+            <div className="container mx-auto mb-8 px-8 lg:px-10">
+                <div className="flex h-[5rem] w-full items-center justify-between border-b border-blue-400">
                     <div className="md:float-left">
                         <Link href="/">
                             <a>
@@ -47,7 +47,7 @@ const Header = ({ isThemeDark, setIsThemeDark }) => {
                             </a>
                         </Link>
                     </div>
-                    <div className="sticky top-0 left-0 z-50 float-right flex h-full items-center space-x-10">
+                    <div className="sticky top-0 left-0 z-50 float-right flex h-full items-center space-x-5 sm:space-x-10">
                         <Theme
                             setIsThemeDark={setIsThemeDark}
                             isThemeDark={isThemeDark}

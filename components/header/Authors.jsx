@@ -18,7 +18,7 @@ const Authors = ({ windowsToggle, setWindowsToggle }) => {
     }, [])
 
     return (
-        <div className={`${toggle ? 'z-50' : "z-[5]"} flex border sm:relative`}>
+        <div className={`${toggle ? 'z-50' : "z-[5]"} flex sm:relative`}>
             <button
                 className={`z-20 cursor-pointer text-[2rem] ${
                     toggle &&

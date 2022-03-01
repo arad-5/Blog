@@ -1,4 +1,3 @@
-import React from 'react'
 import Head from 'next/head'
 import { getCategories, getCategoryPosts } from '../../services'
 import { PostCard } from '../../components/componentsExporter'

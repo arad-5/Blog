@@ -12,7 +12,7 @@ const Index = () => {
     }, [])
 
     return (
-        <div className="container mx-auto mb-8 grid grid-cols-3 px-10 gap-6">
+        <div className="container mx-auto mb-8 flex flex-wrap px-2 md:px-10">
             {categories.map((category) => (
                 <CategoryLinkButton category={category} path={`/categories/${category.slug}`} key={category.slug} />
             ))}
@@ -21,4 +21,3 @@ const Index = () => {
 }
 
 export default Index
-

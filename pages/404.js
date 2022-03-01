@@ -11,7 +11,7 @@ const Custom404 = () => {
                 <Error />
             </span>
             <p className=" pb-10 md:text-xl">
-                We couldn't find the page you were looking for :(
+                We couldn&apos;t find the page you were looking for :(
             </p>
             <div className="mt-3 inline-block text-gray-500 border-t pt-5 px-10 border-gray-500">
                 back to{" "}

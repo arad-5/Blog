@@ -42,7 +42,7 @@ const Authors = ({ windowsToggle, setWindowsToggle }) => {
             </button>
 
             <div
-                className={`absolute top-[1.5rem] -right-6 z-10 w-[20rem] max-w-sm p-8 sm:top-0 sm:right-0 ${
+                className={`absolute top-[1.5rem] -right-6 z-10 w-[90vw] max-w-sm p-8 sm:top-0 sm:right-0 ${
                     toggle ? 'window-opened' : 'window-closed'
                 } glassmorphism w-96 rounded-lg  shadow-lg`}
             >

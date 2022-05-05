@@ -14,7 +14,7 @@ const Profile = ({ author }) => {
                     className="h-[4rem] w-[4rem] rounded-full"
                 />
                 <div>
-                    <h3 className="font-bold text-slate-200">{author.name}</h3>
+                    <h3 className="font-bold dark:text-slate-200">{author.name}</h3>
                     <span className="text-slate-300">Joined at: </span>
                     {moment(author.createdAt).format('MMM DD, YYYY')}
                 </div>

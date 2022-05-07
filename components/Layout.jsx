@@ -3,12 +3,13 @@ import Header from './header/Header'
 import Progressbar from './progressBar/Progressbar'
 
 const Layout = ({ children }) => {
-    const [isThemeDark, setIsThemeDark] = useState(true)
     return (
         <>
             <Progressbar />
-            <div className={`${isThemeDark ? "dark text-slate-300 bg-[#0e0e0e]" : "bg-white text-slate-800"} min-h-[100vh]`}>
-                <Header isThemeDark={isThemeDark} setIsThemeDark={setIsThemeDark}/>
+            <Header />
+            <div
+                className="text-slate-800 selection:bg-white dark:bg-[#0e0e0e] dark:text-slate-300"
+            >
                 {children}
             </div>
         </>

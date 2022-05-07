@@ -7,7 +7,7 @@ import Theme from './Theme/Theme'
 import { useState } from 'react'
 import OutsideClickHandler from 'react-outside-click-handler'
 
-const Header = ({ isThemeDark, setIsThemeDark }) => {
+const Header = () => {
     const [windowsToggle, setWindowsToggle] = useState({
         authors: false,
         categories: false,
@@ -48,10 +48,7 @@ const Header = ({ isThemeDark, setIsThemeDark }) => {
                         </Link>
                     </div>
                     <div className="sticky top-0 left-0 z-50 float-right flex h-full items-center space-x-5 sm:space-x-10">
-                        <Theme
-                            setIsThemeDark={setIsThemeDark}
-                            isThemeDark={isThemeDark}
-                        />
+                        <Theme />
                         <Authors
                             windowsToggle={windowsToggle}
                             setWindowsToggle={setWindowsToggle}
